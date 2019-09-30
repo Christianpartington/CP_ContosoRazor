@@ -1,0 +1,24 @@
+﻿@page
+@model CP_CoreRazorContoso.Pages.HelloModel
+@{
+    ViewData["Title"] = "Hello";
+} <header class="jumbotron">
+        <h2>C0550 Example Razor Page</h2>
+        <p>
+            This page will prompt the user to enter their name and click on the button to get a hello message
+        </p>
+</header>
+<section>
+    <form method="post">
+        <label> Enter your name:</label>
+        <input type="text" asp-for="Name" placeholder="Your Name" required />
+        <input type="submit" />
+
+        @if (this.Model.Name !=null)
+        {
+            <span> Hello </span> @this.Model.Name
+            <span>, how are you? </span>
+        }
+
+    </form>
+</section>
