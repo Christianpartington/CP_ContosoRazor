@@ -9,16 +9,22 @@
         </p>
 </header>
 <section>
+
+    <h3> The time on the server is @DateTime.Now</h3>
+
     <form method="post">
         <label> Enter your name:</label>
         <input type="text" asp-for="Name" placeholder="Your Name" required />
         <input type="submit" />
+        <p>
 
-        @if (this.Model.Name !=null)
-        {
-            <span> Hello </span> @this.Model.Name
-            <span>, how are you? </span>
-        }
+            @if (this.Model.Name != null)
+            {
+                <span> Hello </span> @this.Model.Name
+                <span>, how are you? </span>
+            }
+        </p>
+
 
     </form>
 </section>

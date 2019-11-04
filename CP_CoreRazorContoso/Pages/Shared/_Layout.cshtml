@@ -34,7 +34,11 @@
                     <li><a asp-page="/Hello">Hello</a></li>
                     <li><a asp-page="/About">About</a></li>
                     <li><a asp-page="/Contact">Contact</a></li>
-
+                    <li><a asp-page="/Currency">Currency Converter</a></li>
+                    <li><a asp-page="/Students">Students</a></li>
+                    <li><a asp-page="/Courses">Courses</a></li>
+                    <li><a asp-page="/Tutors">Tutors</a></li>
+                    <li><a asp-page="/Departments">Departments</a></li>
                 </ul>
             </div>
         </div>
@@ -45,9 +49,7 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; 2019 - CP_CoreRazorContoso</p>
-        </footer>
+        @*<partial name="_Footer"/>*@
     </div>
 
     <environment include="Development">

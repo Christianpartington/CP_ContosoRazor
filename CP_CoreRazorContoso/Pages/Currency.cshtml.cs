@@ -7,21 +7,24 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CP_CoreRazorContoso.Pages
 {
-    public class HelloModel : PageModel
-    {
-        public string Name { get; set; }
 
-        /// <summary>
-        /// This is a method that will be called when a http get occurs. 
-        /// </summary>
+   
+    public class CurrencyModel : PageModel
+    {
+        public Decimal Pounds { get; set; }
+        public Decimal Dollars { get; set; }
+
+
         public void OnGet()
         {
-            Name = null;
+            Pounds = 0;
+            Dollars = 0; 
         }
 
         public void OnPost()
         {
-            this.Name = Request.Form ["Name"];
+            this.Pounds = Convert.ToDecimal(Request.Form["Pounds"]);
+            Pounds = Pounds * 1.13m;
         }
     }
 }

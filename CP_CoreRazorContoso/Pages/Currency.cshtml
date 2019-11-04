@@ -1,0 +1,20 @@
+﻿@page
+@model CP_CoreRazorContoso.Pages.CurrencyModel
+@{
+    ViewData["Title"] = "Currency";
+}
+<header class="jumbotron"></header>
+<h2>Currency Converter </h2>
+
+<form method="post">
+    <label> Convert: </label> <p> UK Pounds to Dollars </p>
+    <input type="text" asp-for="Pounds" placeholder="Pounds" required />
+    <input type="submit" />
+    <p>
+</form>
+
+@if (this.Model.Pounds != 0)
+{
+    <span>, Result Here </span> @this.Model.Pounds
+
+}
